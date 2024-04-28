@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using OpenConstructionSet.Installations;
 
-namespace OpenConstructionSet;
+namespace OpenConstructionSet.Installations;
 
 public interface IInstallationService
 {

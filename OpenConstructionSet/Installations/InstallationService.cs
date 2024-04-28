@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Versioning;
-using OpenConstructionSet.Installations;
 using OpenConstructionSet.Installations.Locators;
 
-namespace OpenConstructionSet;
+namespace OpenConstructionSet.Installations;
 
 /// <inheritdoc/>
 /// <summary>
