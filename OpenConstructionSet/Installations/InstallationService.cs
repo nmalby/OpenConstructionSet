@@ -9,7 +9,6 @@ namespace OpenConstructionSet.Installations;
 /// Creates a new <see cref="InstallationService"/> using the provided <see cref="IInstallationLocator"/>s.
 /// </summary>
 /// <param name="locators">Collection of <see cref="IInstallationLocator"/> used to find <see cref="IInstallation"/>s.</param>
-[SupportedOSPlatform("windows")]
 public class InstallationService(IEnumerable<IInstallationLocator> locators) : IInstallationService
 {
     private readonly Dictionary<string, IInstallationLocator> locatorDictionary = locators.ToDictionary(l => l.Id, l => l, StringComparer.OrdinalIgnoreCase);

@@ -13,7 +13,7 @@ public class Installation : IInstallation
     /// <param name="identifier">Name used to identify this installation e.g. Steam</param>
     /// <param name="path">The full path of the installation.</param>
     /// <param name="content">Optional content folder e.g. Steam Workshop folder.</param>
-    public Installation(string identifier, string path, string? content)
+    public Installation(string identifier, string path, string? content = null, string? save = null)
     {
         Identifier = identifier;
         RootPath = path;
@@ -23,7 +23,7 @@ public class Installation : IInstallation
 
         Content = content is not null ? new ModFolder(content, ModFolderType.Content) : null;
 
-        Saves = new SaveFolder(Path.Combine(RootPath, "save"));
+        Saves = save is not null ? new SaveFolder(save) : new SaveFolder(Path.Combine(RootPath, "save"));
 
         EnabledModsFile = Path.Combine(Data.Path, OcsConstants.EnabledModFile);
     }

@@ -24,6 +24,7 @@ public static class OcsServiceCollectionExtensions
                 ServiceDescriptor.Singleton<IInstallationLocator, SteamLocator>(),
                 ServiceDescriptor.Singleton<IInstallationLocator, GogLocator>(),
                 ServiceDescriptor.Singleton<IInstallationLocator, LocalLocator>(),
+                ServiceDescriptor.Singleton<IInstallationLocator, ManualLocator>()
         });
 
         return services.AddSingleton<IInstallationService, InstallationService>()
